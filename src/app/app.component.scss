@@ -1,0 +1,30 @@
+.ctn-img {
+    height: 100vh;
+    background: center / cover url('../assets/bg/bg-nike.jpg') no-repeat, #0000004a;
+    background-blend-mode: darken;
+
+    .home-btn {
+        background: #F1D145;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.ctn-sneakers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .ctn-item {
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .sneaker-img {
+        width: 80%;
+    }
+}
+
+
