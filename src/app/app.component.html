@@ -1,29 +1,3 @@
 <app-header></app-header>
-<div class="video-background">
-  <video id="background-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
-    <source src="https://static1.lacoste.com/videos/marketing/1A-kj-desktop-20231004.mp4" type="video/mp4">
-  </video>
-  <div class="centered-content">
-    <div class="container">
-
-      <a href="#" class="button">
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <span class="button__text">COLLECTION 2023 ©</span>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </a>
-    
-    </div>
-  </div>
-</div>
-<div class="ctn-sneakers">
-  <div class="f-center ctn-item" *ngFor="let sneaker of sneakersService.sneakers">
-    <div class="sneaker-container">
-      <img class="sneaker-img" src="{{dataService.url}}image/{{ sneaker.img_1 }}" alt="sneaker' photo">
-      <span>{{ sneaker.name }}</span>
-      <span>{{ sneaker.price }}€</span>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

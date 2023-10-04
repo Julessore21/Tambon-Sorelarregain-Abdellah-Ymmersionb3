@@ -26,9 +26,14 @@
     .login-btn {
         padding: 0px;
         margin: 0px;
-        font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+        font-size: 24px;
         cursor: pointer;
         color: #333;
+        transition: color 0.3s; /* Ajout de la transition de couleur */
+
+        &:hover {
+            color: #FF5733; /* Couleur au survol */
+        }
     }
 
     .txt-nav {
@@ -41,6 +46,7 @@
             margin-right: 20px; /* Espace entre les éléments de navigation */
             cursor: pointer;
             position: relative;
+            transition: color 0.3s; /* Ajout de la transition de couleur */
 
             &:hover .dropdown-content {
                 display: block;
@@ -66,5 +72,12 @@
                 }
             }
         }
+
+        p:hover {
+            color: #FF5733; /* Couleur au survol */
+        }
     }
-}
+        mat-icon {
+            cursor: pointer;
+        }
+    }

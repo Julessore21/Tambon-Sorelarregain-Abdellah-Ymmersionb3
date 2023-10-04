@@ -11,6 +11,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component'
 import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './components/home/home.component';
+import { DetailsComponent } from './components/details/details.component'
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    ProductsComponent
+    ProductsComponent,
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
