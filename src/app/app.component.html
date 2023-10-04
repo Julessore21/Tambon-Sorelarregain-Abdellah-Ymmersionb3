@@ -1,34 +1,3 @@
 <app-header></app-header>
-<div class="video-background">
-  <video id="background-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
-    <source src="https://static1.lacoste.com/videos/marketing/1A-kj-desktop-20231004.mp4" type="video/mp4">
-  </video>
-  <div class="centered-content">
-    <div class="container">
-
-      <a href="#" class="button">
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <span class="button__text">COLLECTION 2023 ©</span>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </a>
-    
-    </div>
-  </div>
-</div>
-<div class="ctn-shop">
-  <div class="ctn-category">
-    <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">Tous</span>
-    <span [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">Homme</span>
-    <span [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">Femme</span>
-  </div>
-  <div class="ctn-polos">
-    <div class="f-center ctn-item" *ngFor="let polo of polosService.polos">
-      <img class="polo-img" src="{{dataService.url}}image/{{ polo.img_1 }}" alt="polo' photo">
-      <span>{{ polo.name }}</span>
-      <span>{{ polo.price }}€</span>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

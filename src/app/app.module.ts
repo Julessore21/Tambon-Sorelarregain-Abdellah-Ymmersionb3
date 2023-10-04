@@ -7,14 +7,18 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './components/home/home.component';
+import { DetailsComponent } from './components/details/details.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
