@@ -12,17 +12,29 @@
     }
 }
 
-.ctn-sneakers{
+.ctn-shop{
+    padding: 20px;
+    .ctn-category{
+        display: flex;
+        gap: 10px;
+        .selected{
+            color: red;
+        }
+    }
+}
+
+.ctn-polos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding: 20px 0;
 
     .ctn-item {
         width: 30%;
         flex-direction: column;
     }
 
-    .sneaker-img {
+    .polo-img {
         width: 80%;
     }
 }
