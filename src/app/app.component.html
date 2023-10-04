@@ -19,12 +19,15 @@
 </div>
 <div class="ctn-shop">
   <div class="ctn-category">
-    <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">Tous</span>
-    <span [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">Homme</span>
-    <span [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">Femme</span>
+    <span><p>Filtres : </p></span>
+    <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">| Tous |</span>
+    <span [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">| Homme |</span>
+    <span [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">| Femme |</span>
   </div>
   <div class="ctn-polos">
     <div class="f-center ctn-item" *ngFor="let polo of polosService.polos">
+      <div *ngIf="polo.reduction>0">
+        </div>
       <img class="polo-img" src="{{dataService.url}}image/{{ polo.img_1 }}" alt="polo' photo">
       <span>{{ polo.name }}</span>
       <span>{{ polo.price }}€</span>
