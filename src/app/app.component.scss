@@ -29,18 +29,23 @@
   }
   
  
-.button{
-    position : relative ;
-    z-index : 0 ;
-    width : 300px ;
-    height : 100px ;
-    text-decoration : none ;
-    font-size : 20px ; 
-    font-weight : bold ;
-    color : var(--line_color) ;
-    letter-spacing : 2px ;
-    transition : all .3s ease ;
+  .button {
+    position: relative;
+    z-index: 0;
+    width: 300px;
+    height: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Ajout de la transition de couleur */
+
+    &:hover {
+        color: #FF5733; /* Couleur au survol */
+    }
 }
+
 .button__text{
     color: rgb(4, 4, 4);
     display : flex ;
