@@ -1,6 +1,21 @@
 <app-header></app-header>
-<div class="ctn-img f-center">
-  <div (click)="displayerBuypolo()" class="home-btn">Achetez vos polos</div>
+<div class="video-background">
+  <video id="background-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+    <source src="https://static1.lacoste.com/videos/marketing/1A-kj-desktop-20231004.mp4" type="video/mp4">
+  </video>
+  <div class="centered-content">
+    <div class="container">
+
+      <a href="#" class="button">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">COLLECTION 2023 ©</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+    
+    </div>
+  </div>
 </div>
 <div class="ctn-shop">
   <div class="ctn-category">
@@ -16,4 +31,4 @@
     </div>
   </div>
 </div>
-
+<app-footer></app-footer>
