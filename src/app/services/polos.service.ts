@@ -18,6 +18,7 @@ export class polosService {
     this.dataService.getPolos().subscribe((data: any) => {
       this.polos = data.polos;
       this.category = "tous";
+      console.log(this.polos)
     });
   }
 
