@@ -1,13 +1,60 @@
+/* Styles pour le menu de navigation */
 #ctn-header {
     position: fixed;
+    z-index: 9999;
     width: 100%;
     background: #fff;
     box-shadow: 0 1px 2px 2px #0000009a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .logo{
+    .logo {
         width: 130px;
         height: 80px;
         margin: 0%;
     }
-}
 
+    .login-btn {
+        padding: 0px;
+        margin: 0px;
+        font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+        cursor: pointer;
+        color: #333;
+    }
+
+    .txt-nav {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-right: 20px; /* Espace entre les éléments de navigation */
+            cursor: pointer;
+            position: relative;
+
+            &:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                top: 100%;
+                left: 0;
+                padding: 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 5px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
