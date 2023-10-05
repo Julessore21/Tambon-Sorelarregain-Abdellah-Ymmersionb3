@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent} ,
   {path: 'home', component: HomeComponent},
   {path: 'polo/:id', component: DetailsComponent},  
-  {path: '/checkout', component: CheckoutComponent},  
+  {path: 'checkout', component: CheckoutComponent},  
 
 ];
 
