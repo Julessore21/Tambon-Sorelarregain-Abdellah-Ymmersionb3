@@ -14,7 +14,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component'
 
-
 @NgModule({
   declarations: [
     AppComponent,

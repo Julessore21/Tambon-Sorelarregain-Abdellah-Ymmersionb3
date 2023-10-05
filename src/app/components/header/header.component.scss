@@ -4,9 +4,9 @@
     z-index: 9999;
     width: 100%;
     background: #fff;
-    box-shadow: 0 1px 2px 2px #0000009a;
+    box-shadow: 0 1px 1px 1px #0000009a;
     height: 100px;
-
+    margin-top: 0;
     .container-header{
         position: relative;
         width:100%;
@@ -21,19 +21,6 @@
         height: 90px;
         position: absolute;
         
-    }
-
-    .login-btn {
-        padding: 0px;
-        margin: 0px;
-        font-size: 24px;
-        cursor: pointer;
-        color: #333;
-        transition: color 0.3s; /* Ajout de la transition de couleur */
-
-        &:hover {
-            color: #FF5733; /* Couleur au survol */
-        }
     }
 
     .txt-nav {
