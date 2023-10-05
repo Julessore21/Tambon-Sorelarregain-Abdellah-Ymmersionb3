@@ -12,7 +12,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component'
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
-import { DetailsComponent } from './components/details/details.component'
+import { DetailsComponent } from './components/details/details.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetailsComponent } from './components/details/details.component'
     CartComponent,
     ProductsComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

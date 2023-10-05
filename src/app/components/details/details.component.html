@@ -1,1 +1,57 @@
-<img src="{{dataService.url}}image/{{ polo.img_1 }}" alt="">
+<div class="container">
+  <div class="header">
+      <div class="header-logo">
+          <h1 class="product__title">Polo Lacoste</h1>
+          <p class="product__subtitle">Homme Bleu</p>
+      </div>
+      <nav class="header-nav">
+          <i class="ion-ios-cart"></i>
+          <div></div>
+      </nav>
+  </div>
+  <div class="product">
+      <div class="product-photo">
+          <img src="{{ dataService.url }}image/{{ polo.img_1 }}" alt="{{ polo.name }}">
+          <img src="{{ dataService.url }}image/{{ polo.img_2 }}" alt="{{ polo.name }}">
+      </div>
+      <div class="product-detail">
+          <div class="product__price">Prix: {{ polo.price }} EUR</div>
+          <div class="product__color">
+              <div class="color-box"></div>
+              <p>Couleur: <span class="color-text">Bleu</span></p>
+          </div>
+          <div class="product__sizes">
+            <p>Tailles disponibles:</p>
+            <div class="size-boxes">
+                <label for="size-s" class="size-box">
+                    <input type="radio" id="size-s" name="size" value="S">
+                    S
+                </label>
+                
+                <label for="size-m" class="size-box">
+                    <input type="radio" id="size-m" name="size" value="M">
+                    M
+                </label>
+                
+                <label for="size-l" class="size-box">
+                    <input type="radio" id="size-l" name="size" value="L">
+                    L
+                </label>
+                
+                <label for="size-xl" class="size-box">
+                    <input type="radio" id="size-xl" name="size" value="XL">
+                    XL
+                </label>
+            </div>
+        </div>        
+          <div class="product__reduction">
+              <!-- Ne pas afficher ici -->
+          </div>
+          <!-- Ajoutez le bouton "Ajouter au panier" ici -->
+          <a class="product__button" href="#" onClick="buttonAnimate()">
+              <span>Ajouter au panier</span>
+              <span>Succès</span>
+          </a>
+      </div>
+  </div>
+</div>
