@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './components/home/home.component';
-import { DetailsComponent } from './components/details/details.component'
+import { DetailsComponent } from './components/details/details.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DetailsComponent } from './components/details/details.component'
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

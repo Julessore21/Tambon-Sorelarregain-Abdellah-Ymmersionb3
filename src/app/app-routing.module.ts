@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent} ,
   {path: 'home', component: HomeComponent},
   {path: 'polo/:id', component: DetailsComponent},  
+  {path: '/checkout', component: CheckoutComponent},  
+
 ];
 
 @NgModule({
