@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Site</title>
-</head>
-<body>
-    <header id="ctn-header" class="f-center">
-        <div class="txt-nav">
-            <p routerLink="home">ACCUEIL</p>
-            <p>NOUVEAUTES</p>
-            <p>FEMME</p>
-            <p>HOMME</p>
-        </div>
+<header id="ctn-header" class="f-center">
+    <div class="txt-nav">
+        <p>ACCUEIL</p>
+        <p>NOUVEAUTES</p>
+        <p>FEMME</p>
+        <p>HOMME</p>
+    </div>
+    <div class="container-header">
         <img class="logo" src="../../../assets/logo/logo.png" alt="">
-        <mat-icon class="login-btn">shopping_cart</mat-icon>
-    </header>
-
-    <!-- Le reste de votre contenu -->
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+    <div style=" background-color: black;">
+        <button style="border-style: none; height:60 px; width: 60px; background-color: white;" class="byn btn-primary">
+            <i style="font-size: 30px; color: black;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px; " class="badge bg-danger">5</div> 
+        </button>
+    </div>
+   
+    
+    <mat-icon class="login-btn">account_circle</mat-icon>
+       
+</header>
