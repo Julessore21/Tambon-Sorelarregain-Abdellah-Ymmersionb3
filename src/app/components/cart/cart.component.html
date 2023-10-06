@@ -7,7 +7,7 @@
                     <thead class="table table-responsive">
                         <tr>
                             <th>Nom du produit</th>
-                            <th>Price</th>
+                            <th>Prix</th>
                         </tr>
                     </thead>
                     <tbody class="table table-responsive">
@@ -19,7 +19,9 @@
                             <td></td>
                             <td>{{item.size}}</td>
                             <td>
-                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                <button style="color: red; border-radius: 2rem;border-color: red;"(click)="removeItem(item)"><i class="fas fa-trash-alt"></i></button>
+                                <button style="margin: 10px; color: green; border-radius: 2rem;border-color: green;" routerLink="/checkout">Valider le paiement</button>
+                                <p style="color: rgb(104, 7, 7);">"Nous vous assurons le paiement du produit, mais malheuresement pas la réception..."</p>
                             </td>
                         </tr>
                     </tbody>

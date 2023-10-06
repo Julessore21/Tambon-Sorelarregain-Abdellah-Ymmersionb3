@@ -13,7 +13,7 @@
 
                     <div class="row">
                         <div class="col-50">
-                            <h3>Billing Address</h3>
+                            <h3>Procéder au paiement</h3>
                             <label for="fname"><i class="fa fa-user"></i> Nom / Prénom</label>
                             <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
                             <label for="email"><i class="fa fa-envelope"></i> Email</label>
@@ -73,18 +73,22 @@
 
         <div class="col-25">
             <div class="container">
-                <h4>Carte
+                <h4>Vos Articles
                     <span class="price" style="color:black">
-                        <i class="fa fa-shopping-cart"></i>
-                        <b>4</b>
                     </span>
                 </h4>
-                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                <tr *ngFor="let item of productsCart; let i = index">
+                         
+                    <td>{{item['name']}}</td>
+                    <td>{{item['price']}}€</td>
+                    <th></th>
+                    <td></td>
+                    <td>{{item.size}}</td>
+                    <td>
+                        <p style="color: rgb(104, 7, 7);"><br><br><br>"Nous vous assurons le paiement du produit, mais malheuresement pas la réception..."</p>
+                    </td>
+                </tr>
                 <hr>
-                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
             </div>
         </div>
     </div>
