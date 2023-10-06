@@ -15,7 +15,6 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './checkout/checkout.component'
 
-
 @NgModule({
   declarations: [
     AppComponent,
