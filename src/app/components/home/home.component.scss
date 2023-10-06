@@ -49,6 +49,9 @@
 .ctn-shop{
     padding: 20px;
     .ctn-category{
+        :hover{
+            cursor:pointer;
+        }
         display: flex;
         gap: 10px;
         .selected{
@@ -312,3 +315,4 @@
       font-weight: bold;
     }
   }
+

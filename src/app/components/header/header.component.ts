@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  public totalItem : number = 0;
+  constructor(private cartService : CartService) {}
+
+  ngOnInit(): void {
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+      
+    })
+  }
 }

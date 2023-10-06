@@ -28,4 +28,8 @@ export class polosService {
       this.category = category;
     })
   }
+
+  addtocart(){
+    
+  }
 }

@@ -20,8 +20,8 @@
     <div class="ctn-category">
     
       <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">Tous</span>
-      <span [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">| Homme |</span>
-      <span [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">| Femme |</span>
+      <span class="categories" [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">| Homme |</span>
+      <span class="categories" [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">| Femme |</span>
     </div>
     <div class="ctn-polos">
       <div routerLink="/polo/{{polo.id}}" class="f-center ctn-item" *ngFor="let polo of polosService.polos">
