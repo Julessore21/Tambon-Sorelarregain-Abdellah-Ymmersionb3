@@ -19,7 +19,7 @@ export class CartService {
   }
 
   addtoCart(product : any){
-    localStorage.setItem("cart", product);
+    localStorage.setItem("product", JSON.stringify(product));
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();

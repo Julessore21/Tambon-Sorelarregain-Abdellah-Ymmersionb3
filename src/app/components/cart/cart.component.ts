@@ -6,15 +6,33 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  public product : any = [];
+  public polos : any = [];
   public grandTotal : number = 0;
+  public productsCart: any[] = [];
+
   constructor(private cartService : CartService){}
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res: any)=>{
-      this.product = res;
+      this.polos = res;
       this.grandTotal = this.cartService.getTotalPrice();
     })
-    localStorage.getItem("cart");
+    this.listcart();
     
+  }
+
+  listcart(){
+    const cart = localStorage.getItem("product");
+    console.log(cart)
+    if (cart != null){
+      this.productsCart.push(JSON.parse(cart));
+    }
+    console.log(this.productsCart)
+  }
+ 
+  removeItem(item : any){
+    this.cartService.removeCartItem(item);
+  }
+  emptycart(){
+    this.cartService.removeAllCart();
   }
 }

@@ -16,15 +16,12 @@ export class DetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     protected dataService: DataService,  
-    private cartService:CartService,
+    protected cartService:CartService,
   ){}
 
   ngOnInit(): void{
     this.dataService.getPolo(this.id).subscribe((data: any) => {
       this.polo = data.polo;
-      this.polo.forEach((a:any)=>{
-        Object.assign(a,{quantity:1,total:this.polo.price});
-      });
     })
   }
 

@@ -44,10 +44,10 @@
                 <!-- Ne pas afficher ici -->
             </div>
             <!-- Ajoutez le bouton "Ajouter au panier" ici -->
-            <a class="product__button" (click)=addtocart(this.polo)>
-                <span>Ajouter au panier</span>
-                <span>Succès</span>
-            </a>
+            
+            <button id="buttonadd" (click)="cartService.addtoCart(polo)">
+                Add to cart
+            </button>
         </div>
     </div>
   </div>
