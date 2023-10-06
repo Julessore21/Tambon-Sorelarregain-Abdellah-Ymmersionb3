@@ -9,11 +9,9 @@
             <div></div>
         </nav>
     </div>
+    
     <div class="product">
-        <div class="product-photo">
-            <img src="{{ dataService.url }}image/{{ polo.img_1 }}" alt="{{ polo.name }}">
-            <img src="{{ dataService.url }}image/{{ polo.img_2 }}" alt="{{ polo.name }}">
-        </div>
+        <app-image-carousel></app-image-carousel>
         <div class="product-detail">
             <div class="product__price">Prix: {{ polo.price }} EUR</div>
             <div class="product__color">

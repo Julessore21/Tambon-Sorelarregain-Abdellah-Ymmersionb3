@@ -1,37 +1,41 @@
 <div class="video-background">
-    <video id="background-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
-      <source src="https://static1.lacoste.com/videos/marketing/1A-kj-desktop-20231004.mp4" type="video/mp4">
-    </video>
-    <div class="centered-content">
-      <div class="container">
-  
-        <a href="#" class="button">
-          <div class="button__line"></div>
-          <div class="button__line"></div>
-          <span class="button__text">COLLECTION 2023 ©</span>
-          <div class="button__drow1"></div>
-          <div class="button__drow2"></div>
-        </a>
-      
+  <video id="background-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+    <source src="https://static1.lacoste.com/videos/marketing/1A-kj-desktop-20231004.mp4" type="video/mp4">
+  </video>
+  <div class="centered-content">
+    <div class="container">
+      <a href="#" class="button">
+        <div class="buttonline"></div>
+        <div class="buttonline"></div>
+        <span class="buttontext">COLLECTION 2023 ©</span>
+        <div class="buttondrow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="ctn-shop">
+  <div class="ctn-category">
+    <div class="ctn-category">
+      <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">Tous</span>
+      <span [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">| Homme |</span>
+      <span [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">| Femme |</span>
+      <span [ngClass]="{'selected': polosService.category === 'triPrixCroissant'}" (click)="triPrixCroissant()" id="triPrixCroissant">| Prix croissant |</span>
+      <span [ngClass]="{'selected': polosService.category === 'triPrixDecroissant'}" (click)="triPrixDecroissant()" id="triPrixDecroissant">| Prix décroissant |</span>
+
+    </div>
+    
+  </div>
+  <div class="ctn-polos">
+    <div routerLink="/polo/{{polo.id}}" class="f-center ctn-item" *ngFor="let polo of polosService.polos">
+      <img class="polo-img" src="{{dataService.url}}image/{{ polo.img_1 }}" alt="polo' photo">
+      <div *ngIf="polo.reduction > 0">
+        <span class="item-solde">{{polo.price}}€</span>
+        <span>{{polo.price - (polo.price * polo.reduction / 100) }}</span>
+      </div>
+      <div *ngIf="polo.reduction == 0" > 
+        <span>{{polo.price}}€ </span>
       </div>
     </div>
   </div>
-  <div class="ctn-shop">
-    <div class="ctn-category">
-    
-      <span [ngClass]="{'selected': polosService.category === 'tous'}" (click)="polosService.getPolos()">Tous</span>
-      <span class="categories" [ngClass]="{'selected': polosService.category === 'polo_homme'}" (click)="polosService.getPolosByCategory('polo_homme')">| Homme |</span>
-      <span class="categories" [ngClass]="{'selected': polosService.category === 'polo_femme'}" (click)="polosService.getPolosByCategory('polo_femme')">| Femme |</span>
-    </div>
-    <div class="ctn-polos">
-      <div routerLink="/polo/{{polo.id}}" class="f-center ctn-item" *ngFor="let polo of polosService.polos">
-        <img class="polo-img" src="{{dataService.url}}image/{{ polo.img_1 }}" alt="polo' photo">
-        <div *ngIf="polo.reduction > 0">
-          <span class="item-solde">{{polo.price}}€</span>
-          <span>{{polo.price - (polo.price * polo.reduction / 100) }}</span>
-        </div>
-        <div *ngIf="polo.reduction == 0" > 
-          <span>{{polo.price}}€ </span>
-        </div>
-    </div>
-  </div>
+</div>
