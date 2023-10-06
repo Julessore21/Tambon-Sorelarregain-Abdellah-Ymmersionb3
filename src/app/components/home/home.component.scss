@@ -49,6 +49,9 @@
 .ctn-shop{
     padding: 20px;
     .ctn-category{
+        :hover{
+            cursor:pointer;
+        }
         display: flex;
         gap: 10px;
         .selected{
@@ -312,3 +315,9 @@
       font-weight: bold;
     }
   }
+
+/* Ajoutez ceci à votre feuille de style CSS */
+.ctn-category span.selected {
+    color: red; /* La couleur du texte devient rouge lorsque la classe "selected" est appliquée */
+  }
+  
