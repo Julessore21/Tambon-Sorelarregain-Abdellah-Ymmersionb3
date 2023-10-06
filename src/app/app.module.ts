@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { CartComponent } from './components/cart/cart.component';
-import { ProductsComponent } from './components/products/products.component'
-import {MatButtonModule} from '@angular/material/button';
+import { ProductsComponent } from './components/products/products.component';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms'; // Import de FormsModule
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
-import { CheckoutComponent } from './checkout/checkout.component'
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MonCompteComponent } from './components/moncompte/moncompte.component';
+import { ConexionComponent } from './components/conexion/conexion.component'; // Import de ConexionComponent
 
 @NgModule({
   declarations: [
@@ -23,16 +25,19 @@ import { CheckoutComponent } from './checkout/checkout.component'
     ProductsComponent,
     HomeComponent,
     DetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    MonCompteComponent,
+    ConexionComponent, // Ajout de ConexionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule, // Ajout de FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
