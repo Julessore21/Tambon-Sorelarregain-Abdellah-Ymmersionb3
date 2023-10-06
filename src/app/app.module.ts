@@ -15,6 +15,9 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './checkout/checkout.component'
 
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +27,16 @@ import { CheckoutComponent } from './checkout/checkout.component'
     ProductsComponent,
     HomeComponent,
     DetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ImageCarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MdbCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
