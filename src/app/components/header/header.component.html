@@ -6,6 +6,12 @@
         <p>HOMME</p>
     </div>
     <div class="container-header">
-        <img class="logo" src="../../../assets/logo/logo.png" alt="">
+        <img onclick="window.location.href='/home'"  class="logo" src="../../../assets/logo/logo.png" alt="">
     </div>
+    <div style=" background-color: black;">
+        <button  onclick="window.location.href='/cart'" style="border-style: none; height:60 px; width: 60px; background-color: white; margin-right: 2%; "  class="byn btn-primary ">
+            <i style="font-size: 30px; color: black;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px; " class="badge bg-danger">{{totalItem}}</div> 
+        </button>
+    </div>       
 </header>
