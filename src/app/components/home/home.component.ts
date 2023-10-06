@@ -35,5 +35,5 @@ export class HomeComponent implements OnInit {
     // Activez la classe "selected" pour "Prix décroissant" et désactivez la classe pour "Prix croissant"
     document.getElementById('triPrixDecroissant')?.classList.add('selected');
     document.getElementById('triPrixCroissant')?.classList.remove('selected');
-  }
+}
 }

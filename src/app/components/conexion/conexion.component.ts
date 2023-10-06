@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./conexion.component.scss']
 })
 export class ConexionComponent {
+  connexion = { email: '', password: '' };
 
+  soumettreConnexion() {
+    // Logique de soumission du formulaire de connexion
+  }
+
+  passerEnModeInscription() {
+    // Logique pour passer au mode d'inscription
+  }
 }

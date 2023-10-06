@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms'; // Import de FormsModule
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -35,7 +35,7 @@ import { ConexionComponent } from './components/conexion/conexion.component'; //
     HttpClientModule,
     MatIconModule,
     MatButtonModule,
-    FormsModule, // Ajout de FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
