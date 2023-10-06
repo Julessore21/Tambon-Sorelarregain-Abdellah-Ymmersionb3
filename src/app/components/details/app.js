@@ -1,28 +1,21 @@
-document.getElementById('range-picker').addEventListener('click', function(e) {
-    var sizeList = document.getElementById('range-picker').children;
-    for (var i = 0; i <= sizeList.length - 1; i++) {
-      console.log(sizeList[i].classList);
-      if (sizeList[i].classList.contains('active')) {
-        sizeList[i].classList.remove('active');
-      }
-    }
-    e.target.classList.add('active');
-  })
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
   
-  document.getElementById('color-a').addEventListener('click', function() {
-    document.getElementById('color-overlay').style.transform = 'translateX(-0.5px)';
-    document.getElementById('background-element').style.backgroundColor = '#333';
-    document.getElementById('highlight-overlay').style.opacity = '1';
-    document.getElementById('highlight-overlay-mobile').style.opacity = '1';
-    document.getElementById('color-name').innerHTML = "BLACK / 050";
-    document.getElementById('color-name').style.color = '#333'
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
   
-  })
-  document.getElementById('color-b').addEventListener('click', function() {
-    document.getElementById('color-overlay').style.transform = 'translateX(45px)';
-    document.getElementById('background-element').style.backgroundColor = '#457';
-    document.getElementById('highlight-overlay').style.opacity = '0';
-    document.getElementById('highlight-overlay-mobile').style.opacity = '0';
-    document.getElementById('color-name').innerHTML = "BLUES / 2V5";
-    document.getElementById('color-name').style.color = '#457'
-  })
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});
