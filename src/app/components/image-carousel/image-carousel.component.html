@@ -1,0 +1,10 @@
+<div *ngIf="polo" class="carousel">
+     <div class="product-photo">
+      <img [src]="imageUrl(currentIndex)" alt="{{ polo.name }}">
+    </div>
+    <div class="navigation">
+      <button (click)="prevImage()"><i class="fas fa-chevron-left"></i></button>
+      <button (click)="nextImage()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    
+  </div>

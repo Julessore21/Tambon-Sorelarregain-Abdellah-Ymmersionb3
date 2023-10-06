@@ -13,8 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { MonCompteComponent } from './components/moncompte/moncompte.component';
-import { ConexionComponent } from './components/conexion/conexion.component'; // Import de ConexionComponent
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { ConexionComponent } from './components/conexion/conexion.component'; //
     HomeComponent,
     DetailsComponent,
     CheckoutComponent,
-    MonCompteComponent,
-    ConexionComponent, // Ajout de ConexionComponent
+    ImageCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +35,8 @@ import { ConexionComponent } from './components/conexion/conexion.component'; //
     MatIconModule,
     MatButtonModule,
     FormsModule,
+    MdbCheckboxModule,
+    FormsModule, // Ajout de FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -27,7 +27,7 @@
     
   </div>
   <div class="ctn-polos">
-    <div routerLink="/polo/{{polo.id}}" class="f-center ctn-item" *ngFor="let polo of polosService.polos">
+    <div  routerLink="/polo/{{polo.id}}" class="f-center ctn-item" *ngFor="let polo of polosService.polos">
       <img class="polo-img" src="{{dataService.url}}image/{{ polo.img_1 }}" alt="polo' photo">
       <div *ngIf="polo.reduction > 0">
         <span class="item-solde">{{polo.price}}€</span>
